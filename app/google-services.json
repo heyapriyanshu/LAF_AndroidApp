@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210615144783",
+    "project_id": "lostandfoundete",
+    "storage_bucket": "lostandfoundete.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210615144783:android:16f31aadeaf12d121fb53a",
+        "android_client_info": {
+          "package_name": "com.example.lostandfoundete"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210615144783-bklf9tebnuiafgebfqgu5u86ivu9b2m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSJ6BWIEqYij3q4gEuN8wypjvicTCS9ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210615144783-bklf9tebnuiafgebfqgu5u86ivu9b2m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

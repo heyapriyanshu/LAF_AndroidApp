@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.LostAndFoundAppCS230" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/darkest_shade</item>
+        <item name="colorPrimaryVariant">@color/alternate_darkest</item>
+        <item name="colorOnPrimary">@color/lightest_shade</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/darkest_shade</item>
+        <item name="colorSecondaryVariant">@color/alternate_darkest</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
