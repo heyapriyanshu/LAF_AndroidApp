@@ -26,8 +26,8 @@ class LostFeedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 //
-//        requestWindowFeature(Window.FEATURE_NO_TITLE) //will hide the title
-//        supportActionBar?.hide() //hide the title bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE) //will hide the title
+        supportActionBar?.hide() //hide the title bar
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lost_feed)
@@ -38,19 +38,17 @@ class LostFeedActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this@LostFeedActivity)
 
         thingsList = arrayListOf()
-        if(thingsList.isEmpty()){
-            noDataImageView.visibility = View.VISIBLE
-            noDataTextView.visibility = View.VISIBLE
-        }else{
-            noDataImageView.visibility = View.INVISIBLE
-           noDataTextView.visibility = View.INVISIBLE
-        }
 
         fetchData()
+
 
     }
 
     private fun fetchData() {
+        if(thingsList.isEmpty()){
+            noDataImageView.visibility = View.VISIBLE
+            noDataTextView.visibility = View.VISIBLE
+        }
         db = FirebaseFirestore.getInstance()
         db.collection("Lost Items").get().addOnSuccessListener {
             if (!it.isEmpty) {
@@ -59,6 +57,8 @@ class LostFeedActivity : AppCompatActivity() {
                     val thing: Things? = data.toObject(Things::class.java)
                     if (thing != null) {
                         thingsList.add(thing)
+                        noDataImageView.visibility = View.INVISIBLE
+                        noDataTextView.visibility = View.INVISIBLE
                     }
                 }
                 recyclerView.adapter = MyAdapter(this, thingsList)
@@ -66,5 +66,9 @@ class LostFeedActivity : AppCompatActivity() {
         }.addOnFailureListener {
             Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
         }
+
+
+
+
     }
 }

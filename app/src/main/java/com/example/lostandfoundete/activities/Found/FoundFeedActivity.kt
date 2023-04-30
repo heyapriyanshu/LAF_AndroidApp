@@ -37,18 +37,16 @@ class FoundFeedActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this@FoundFeedActivity)
 
         thingsList = arrayListOf()
-        if(thingsList.isEmpty()){
-            noDataImageView.visibility = View.VISIBLE
-            noDataTextView.visibility = View.VISIBLE
-        }else{
-            noDataImageView.visibility = View.INVISIBLE
-            noDataTextView.visibility = View.INVISIBLE
-        }
+
         fetchData()
 
     }
 
     private fun fetchData() {
+        if(thingsList.isEmpty()){
+            noDataImageView.visibility = View.VISIBLE
+            noDataTextView.visibility = View.VISIBLE
+        }
         db = FirebaseFirestore.getInstance()
         db.collection("Found Items").get().addOnSuccessListener {
             if (!it.isEmpty) {
@@ -57,6 +55,8 @@ class FoundFeedActivity : AppCompatActivity() {
                     val thing: Things? = data.toObject(Things::class.java)
                     if (thing != null) {
                         thingsList.add(thing)
+                        noDataImageView.visibility = View.INVISIBLE
+                        noDataTextView.visibility = View.INVISIBLE
                     }
                 }
                 recyclerView.adapter = LostThingsAdapter(this, thingsList)

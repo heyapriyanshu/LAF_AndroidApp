@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var Signup_btn: Button
+    private lateinit var Signup_btn: TextView
     private lateinit var Signin_btn: Button
     private lateinit var ForgotPass: TextView
 

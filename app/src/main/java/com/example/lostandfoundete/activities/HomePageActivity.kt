@@ -18,7 +18,8 @@ class HomePageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomepageactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        supportActionBar?.hide() //hide the title bar
+        supportActionBar?.hide() //hide the title bar
+
 
         binding.PostLostCard.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Post_LostActivity::class.java)

@@ -35,10 +35,12 @@ class MyLostPostsActivity : AppCompatActivity() {
         FoundItemsBtn.setOnClickListener {
             val intent = Intent(this, MyFoundPosts::class.java)
             startActivity(intent)
+            finish()
         }
         HomeBtn.setOnClickListener {
             val intent = Intent(this@MyLostPostsActivity, ProfilePageActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         recyclerView = findViewById(R.id.recycler_view_my_lost_things)

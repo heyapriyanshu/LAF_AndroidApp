@@ -44,7 +44,7 @@ class MyFireBaseMessagingService : FirebaseMessagingService() {
         message = remoteMessage.getData().get("Message").toString()
 
         val notification: Notification = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
-            .setSmallIcon(R.drawable.lost_and_found__1_)
+            .setSmallIcon(R.drawable.icon)
             .setContentTitle(title)
             .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_HIGH)

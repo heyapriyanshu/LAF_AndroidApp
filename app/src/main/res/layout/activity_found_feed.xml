@@ -28,8 +28,27 @@
         app:layout_constraintEnd_toEndOf="@+id/no_data_imageView"
         app:layout_constraintStart_toStartOf="@+id/no_data_imageView"
         app:layout_constraintTop_toBottomOf="@+id/no_data_imageView" />
+    <TextView
+        android:id="@+id/post_lost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="50"
+        android:background="@color/darkest_shade"
+        android:paddingTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:paddingBottom="5dp"
+        android:text="Found Items Feed"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        tools:ignore="InefficientWeight,TextContrastCheck" />
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_marginTop="45dp"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView

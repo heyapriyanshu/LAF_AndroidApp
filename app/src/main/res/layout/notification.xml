@@ -14,7 +14,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_height="70dp"
-            android:src="@drawable/lost_and_found__1_"/>
+            android:src="@drawable/icon"/>
 
         <TextView
             android:id="@+id/notification_title"
